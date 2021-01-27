@@ -1,5 +1,14 @@
 {
-    "I": [1, 30],
-    "II": [31, 50],
-    "III": [51, 70]
+    "I": {
+        "s_range": [1, 30],
+        "seeg_folder": "seeg"
+    },
+    "II": {
+        "s_range": [31, 50],
+        "seeg_folder": "seeg"
+    },
+    "III": {
+        "s_range": [51, 70],
+        "seeg_folder": "sEEG"
+    }
 }
