@@ -12,7 +12,7 @@ if __name__ == '__main__':
     ###########################################################################
     # mi settings
     regr = 'difficulty'
-    n_perm = 20
+    n_perm = 200
     inference = 'rfx'
     mcp = 'cluster'
     nb_min_suj = 10
@@ -51,13 +51,13 @@ if __name__ == '__main__':
 
     # __________________________________ DATA _________________________________
     x = []
-    for n_f, f in enumerate(files[0:5]):  # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    for n_f, f in enumerate(files):
         # show the file that is loaded
         _, fname = os.path.split(f)
         print(f"Loading {fname}", end='\r')
         
         # load the data
-        _data = xr.load_dataarray(f)
+        _data = xr.load_dataarray(f).sel(times=slice(-.75, 2.5))
         
         # make trials categorical (if needed)
         tr_before = _data[regr].data.copy()
@@ -67,7 +67,7 @@ if __name__ == '__main__':
 
         x += [_data.isel(roi=[r]) for r in range(len(_data['roi']))]
     
-    # _______________________________-___ MI ____________-_____________________
+    # ___________________________________ MI __________________________________
     # define the dataset
     ds = DatasetEphy(x, y='trials', roi='roi', times='times',
                      nb_min_suj=nb_min_suj)
