@@ -3,5 +3,8 @@ Jupyter notebooks for the analysis of task-related iEEG data from the Human Intr
 
 The repository contains scripts for loading, preprocessing and analyzing task-related iEEG data of the HID present on EBRAINS.
 
+It also contains Matlab code for Shape Mediation Analysis based on this preprint 
+https://biorxiv.org/cgi/content/short/2023.09.21.558808v1
+
 The HID dataset is on the EBRAINS Data and Knowledge service and there are 3 cohorts for a total of N=70
 https://kg.ebrains.eu/search/instances/Dataset/02423f5246192a2844e05ad0434490e0
