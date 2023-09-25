@@ -1,4 +1,4 @@
-# seeg-ebrains
+# Tools for the analysis of intracranial SEEG data from EBRAINS
 Jupyter notebooks for the analysis of task-related iEEG data from the Human Intracranial Database (HID) of EBRAINS using information theoretical measures and task-related functional connectivity implemented in the Frites Python toolbox.
 
 The repository contains scripts for loading, preprocessing and analyzing task-related iEEG data of the HID present on EBRAINS.
